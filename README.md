@@ -26,7 +26,7 @@ The length of each segment, in logical pixels.
 
 ### spacing
 
-Extra spacing to add to the 
+Extra spacing to pad the distance between the center of the loading indicator and each segment, in logical pixels.
 
 ### fadeTo
 
