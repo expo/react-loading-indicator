@@ -71,7 +71,7 @@ export default class LoadingIndicator extends React.Component {
     return (
       <svg
         className={this.props.className}
-        style={[styles.spinner, this.props.style]}
+        style={[styles.indicator, this.props.style]}
         width={radius * 2}
         height={radius * 2}
         xmlns="http://www.w3.org/2000/svg">
