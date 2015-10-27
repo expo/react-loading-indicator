@@ -1,0 +1,28 @@
+{
+  "name": "react-loading-indicator",
+  "version": "0.1.0",
+  "description": "A loading indicator written purely in React that uses SVG and no images",
+  "main": "LoadingIndicator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exponentjs/react-loading-indicator.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "loading-indicator"
+  ],
+  "author": "James Ide",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exponentjs/react-loading-indicator/issues"
+  },
+  "homepage": "https://github.com/exponentjs/react-loading-indicator#readme",
+  "dependencies": {
+    "radium": "^0.14.3",
+    "react": "^0.14.0"
+  }
+}
