@@ -36,6 +36,9 @@ const RefreshControlProps = {
 @Radium
 export default class LoadingIndicator extends React.Component {
 
+  static ActivityIndicatorProps = ActivityIndicatorProps;
+  static RefreshControlProps = RefreshControlProps;
+
   static defaultProps = ActivityIndicatorProps;
 
   render() {
