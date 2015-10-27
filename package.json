@@ -2,9 +2,9 @@
   "name": "react-loading-indicator",
   "version": "0.1.0",
   "description": "A loading indicator written purely in React that uses SVG and no images",
-  "main": "LoadingIndicator.js",
+  "main": "build/LoadingIndicator.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "babel -d build src"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "dependencies": {
     "radium": "^0.14.3",
     "react": "^0.14.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29"
   }
 }

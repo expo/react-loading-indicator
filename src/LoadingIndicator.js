@@ -34,7 +34,7 @@ const RefreshControlProps = {
 };
 
 @Radium
-export default class LoadingIndicator extends React.Component;
+export default class LoadingIndicator extends React.Component {
 
   static defaultProps = ActivityIndicatorProps;
 
@@ -98,6 +98,6 @@ let spinKeyframes = Radium.keyframes({
 
 let styles = {
   indicator: {
-    animation: `${spinKeyframes} 1s steps(12) infinite`;
+    animation: `${spinKeyframes} 1s steps(12) infinite`,
   },
 };
