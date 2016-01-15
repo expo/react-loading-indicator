@@ -33,12 +33,7 @@ const RefreshControlProps = {
   fadeSteps: 11,
 };
 
-@Radium
-export default class LoadingIndicator extends React.Component {
-
-  static ActivityIndicatorProps = ActivityIndicatorProps;
-  static RefreshControlProps = RefreshControlProps;
-
+class LoadingIndicator extends React.Component {
   static defaultProps = ActivityIndicatorProps;
 
   render() {
@@ -89,6 +84,11 @@ export default class LoadingIndicator extends React.Component {
     );
   }
 }
+
+LoadingIndicator = Radium(LoadingIndicator);
+LoadingIndicator.ActivityIndicatorProps = ActivityIndicatorProps;
+LoadingIndicator.RefreshControlProps = RefreshControlProps;
+export default LoadingIndicator;
 
 let spinKeyframes = Radium.keyframes({
   from: {
