@@ -97,10 +97,11 @@ let spinKeyframes = Radium.keyframes({
   to: {
     transform: 'rotate(360deg)',
   },
-});
+}, 'spin');
 
 let styles = {
   indicator: {
-    animation: `${spinKeyframes} 1s steps(12) infinite`,
+    animation: `spin 1s steps(12) infinite`,
+    animationName: spinKeyframes,
   },
 };
