@@ -1,4 +1,5 @@
-import Radium from 'radium';
+import { css, StyleSheet } from 'aphrodite/no-important';
+import classNames from 'classnames';
 import React from 'react';
 
 const ActivityIndicatorProps = {
@@ -33,7 +34,10 @@ const RefreshControlProps = {
   fadeSteps: 11,
 };
 
-class LoadingIndicator extends React.Component {
+export default class LoadingIndicator extends React.Component {
+  static ActivityIndicatorProps = ActivityIndicatorProps;
+  static RefreshControlProps = RefreshControlProps;
+
   static defaultProps = ActivityIndicatorProps;
 
   render() {
@@ -68,8 +72,8 @@ class LoadingIndicator extends React.Component {
 
     return (
       <svg
-        className={this.props.className}
-        style={[styles.indicator, this.props.style]}
+        className={classNames(css(styles.indicator), this.props.className)}
+        style={this.props.style}
         width={radius * 2}
         height={radius * 2}
         xmlns="http://www.w3.org/2000/svg">
@@ -85,23 +89,20 @@ class LoadingIndicator extends React.Component {
   }
 }
 
-LoadingIndicator = Radium(LoadingIndicator);
-LoadingIndicator.ActivityIndicatorProps = ActivityIndicatorProps;
-LoadingIndicator.RefreshControlProps = RefreshControlProps;
-export default LoadingIndicator;
-
-let spinKeyframes = Radium.keyframes({
+const spinKeyframes = {
   from: {
     transform: 'rotate(0deg)',
   },
   to: {
     transform: 'rotate(360deg)',
   },
-}, 'spin');
-
-let styles = {
-  indicator: {
-    animation: `spin 1s steps(12) infinite`,
-    animationName: spinKeyframes,
-  },
 };
+
+const styles = StyleSheet.create({
+  indicator: {
+    animationDuration: '1s',
+    animationIterationCount: 'infinite',
+    animationName: spinKeyframes,
+    animationTimingFunction: 'steps(12)',
+  },
+});
