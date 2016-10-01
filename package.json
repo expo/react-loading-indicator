@@ -1,6 +1,6 @@
 {
   "name": "react-loading-indicator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A loading indicator written purely in React that uses SVG and no images",
   "main": "build/LoadingIndicator.js",
   "files": [
