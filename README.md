@@ -6,8 +6,6 @@ This is a loading indicator written purely in React that uses SVG and no images.
 
 By default, its size is 20x20. Basic usage is simple: `<LoadingIndicator />`.
 
-It is animated using Radium, so LoadingIndicator must be rendered as a descendent of [Radium's `<StyleRoot>` component](https://github.com/FormidableLabs/radium/tree/master/docs/api#styleroot-component).
-
 ## Props
 
 ### color
